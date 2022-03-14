@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.appbikeroute.ui.home.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_salud"
+            app:destination="@id/nav_salud" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_misrutas"
+            app:destination="@id/nav_misrutas" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_salud2"
+            app:destination="@id/nav_salud" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_salud3"
+            app:destination="@id/nav_salud" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_salud"
+        android:name="com.appbikeroute.ui.salud.SaludFragment"
+        android:label=""
+        tools:layout="@layout/fragment_salud" >
+        <action
+            android:id="@+id/action_nav_salud_to_nav_misrutas"
+            app:destination="@id/nav_misrutas" />
+        <action
+            android:id="@+id/action_nav_salud_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_misrutas"
+        android:name="com.appbikeroute.ui.slideshow.SlideshowFragment"
+        android:label=""
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_misrutas_to_nav_salud"
+            app:destination="@id/nav_salud" />
+        <action
+            android:id="@+id/action_nav_misrutas_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+</navigation>

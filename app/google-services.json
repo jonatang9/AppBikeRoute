@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "931398406675",
+    "firebase_url": "https://appbikeroute-uptc-default-rtdb.firebaseio.com",
+    "project_id": "appbikeroute-uptc",
+    "storage_bucket": "appbikeroute-uptc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931398406675:android:dd2916ffef2c3e3b20e5e6",
+        "android_client_info": {
+          "package_name": "com.appbikeroute"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931398406675-9a6dngllcnvj2fgcjd1cg6go48vpq2t6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5cN___KKT0lY8ilVpBXK1PeCKK0CVuA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "931398406675-9a6dngllcnvj2fgcjd1cg6go48vpq2t6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

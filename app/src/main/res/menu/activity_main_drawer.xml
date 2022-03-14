@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_misrutas"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/mis_rutas" />
+        <item
+            android:id="@+id/nav_salud"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/salud" />
+    </group>
+
+    <item android:title="@string/configuracion">
+        <menu>
+            <group android:checkableBehavior = "single">
+                <item
+                    android:id="@+id/botonSalir"
+                    android:icon="?attr/homeAsUpIndicator"
+                    android:title="@string/salir" />
+                <item
+                    android:id="@+id/bcerrarsesion"
+                    android:title="@string/cerrar_sesion" />
+            </group>
+        </menu>
+    </item>
+
+</menu>
+

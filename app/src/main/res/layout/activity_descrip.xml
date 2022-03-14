@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/side_nav_bar"
+    android:scrollbarSize="10dp"
+    tools:context=".DescripActivity">
+
+
+    <ScrollView
+        android:id="@+id/ScrollFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TextView
+                android:id="@+id/nombreRuta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D5000000"
+                android:fontFamily="@font/anton"
+                android:gravity="center"
+                android:text="Nombre Ruta"
+                android:textColor="#FF9800"
+                android:textSize="20sp"
+                android:textStyle="normal|bold|italic" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <FrameLayout
+                android:id="@+id/fragmentLayoutDescrip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_corner_blanco"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/idTextDistanciaDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/anton"
+                                android:gravity="center"
+                                android:text="Distancia:" />
+
+                            <TextView
+                                android:id="@+id/idTextAlturaDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/anton"
+                                android:gravity="center"
+                                android:text="Altura:" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/idTextPendienteDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/anton"
+                                android:gravity="center"
+                                android:text="Pendiente Max:" />
+
+                            <TextView
+                                android:id="@+id/idTextDesnivelDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/anton"
+                                android:gravity="center"
+                                android:text="Desnivel:" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_blanco"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_corner_blanco"
+                            android:fontFamily="@font/k2d_regular"
+                            android:gravity="center"
+                            android:text="FOTOS RUTA"
+                            android:textColor="#FF9800"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar2"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_weight="1" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerFotosRuta"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_corner_blanco"
+                            android:visibility="gone">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            app:cardBackgroundColor="@color/black"
+                            app:cardCornerRadius="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_corner_blanco"
+                                    android:fontFamily="@font/k2d_regular"
+                                    android:text="VISTA GENERAL RUTA"
+                                    android:textAlignment="center"
+                                    android:textColor="#FF9800"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <ProgressBar
+                                    android:id="@+id/progressBar4"
+                                    style="?android:attr/progressBarStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1" />
+
+                                <FrameLayout
+                                    android:id="@+id/fragContainerViewMapa"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="220dp"
+                                    android:visibility="gone">
+
+                                </FrameLayout>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            app:cardBackgroundColor="@color/black"
+                            app:cardCornerRadius="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_corner_blanco"
+                                    android:fontFamily="@font/k2d_regular"
+                                    android:text="GRAFICA GENERAL ALTITUDES"
+                                    android:textAlignment="center"
+                                    android:textColor="#FF9800"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <ProgressBar
+                                    android:id="@+id/progressBar5"
+                                    style="?android:attr/progressBarStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp" />
+
+                                <androidx.fragment.app.FragmentContainerView
+                                    android:id="@+id/fragContainerViewGrafica"
+                                    android:name="com.appbikeroute.AltimetriaFragment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_corner_blanco"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_corner_blanco"
+                            android:fontFamily="@font/k2d_regular"
+                            android:gravity="center"
+                            android:text="DATOS PUERTOS"
+                            android:textColor="#FF9800"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/anton"
+                                android:gravity="center"
+                                android:text="#" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/anton"
+                                android:gravity="center"
+                                android:text="Altura:" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/anton"
+                                android:gravity="center"
+                                android:text="Pendiente:" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/anton"
+                                android:gravity="center"
+                                android:text="Desnivel:" />
+
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressBar3"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerDatosPuertos"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_blanco"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_corner_blanco"
+                            android:fontFamily="@font/k2d_regular"
+                            android:gravity="center"
+                            android:text="LUGARES TURISTICOS"
+                            android:textColor="#FF9800"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar6"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_weight="1" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerLugaresTuristicos"
+                            android:layout_width="match_parent"
+                            android:layout_height="600dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_corner_blanco"
+                            android:scrollbarSize="10dp"
+                            android:visibility="gone">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/biniciarruta"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/rounded_corner_blanco"
+                            android:fontFamily="@font/anton"
+                            android:text="Iniciar Ruta"
+                            android:textColor="#FF9800" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragmentMapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            </FrameLayout>
+
+            <Space
+                android:id="@+id/spaceFragment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/fragmentGrafica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
